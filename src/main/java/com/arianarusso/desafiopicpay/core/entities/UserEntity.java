@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.usertype.UserType;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -19,15 +18,22 @@ import java.util.UUID;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID id;
+    private Long id;
+
     private String firstName;
+
     private String lastName;
+
     @Column(unique = true)
     private String document;
+
     @Column(unique = true)
     private String email;
+
     private String password;
+
     private BigDecimal balance;
+
     @Enumerated(EnumType.STRING)
     private UserType userType;
 
