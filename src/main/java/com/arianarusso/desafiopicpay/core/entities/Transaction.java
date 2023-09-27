@@ -1,4 +1,4 @@
-package com.arianarusso.desafiopicpay.core;
+package com.arianarusso.desafiopicpay.core.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -8,7 +8,6 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity(name = "transactions")
 @Table(name = "transactions")
@@ -34,6 +33,10 @@ public class Transaction {
 
     private LocalDateTime timesstamp;
 
-
-
+    public Transaction(UserEntity sender, UserEntity receiver, BigDecimal value,  LocalDateTime time) {
+        this.sender = sender;
+        this.receiver = receiver;
+        this.amount = value;
+        this.timesstamp =  time;
+    }
 }

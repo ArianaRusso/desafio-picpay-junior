@@ -1,4 +1,4 @@
-package com.arianarusso.desafiopicpay.core;
+package com.arianarusso.desafiopicpay.core.entities;
 
 public enum UserType {
     COMMON,

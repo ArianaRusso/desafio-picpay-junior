@@ -1,4 +1,4 @@
-package com.arianarusso.desafiopicpay.core;
+package com.arianarusso.desafiopicpay.core.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Entity(name = "users")
 @Table(name = "users")
